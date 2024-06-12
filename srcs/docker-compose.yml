@@ -1,0 +1,59 @@
+version: "3.8"
+services:
+  nginx:
+    build: requirements/nginx
+    image: nginx:ssl
+    container_name: nginx
+    restart: always
+    ports:
+      - 443:443
+    volumes:
+      - data:/app/wordpress
+    depends_on:
+      - wordpress
+    env_file:
+      - ./.env
+
+  wordpress:
+    build: requirements/wordpress
+    image: wordpress:fpm
+    container_name: wordpress
+    restart: always
+    volumes:
+      - data:/app/wordpress
+    depends_on:
+      - mariadb
+    env_file:
+      - ./.env
+
+  mariadb:
+    build: requirements/mariadb
+    image: mariadb:db
+    container_name: mariadb
+    restart: always
+    volumes:
+      - db:/var/lib/mysql
+    env_file:
+      - ./.env
+
+networks:
+  default:
+    name: myNetwork
+
+volumes:
+  db_data:
+    name: db_data
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /home/mzeroual/data/db
+  wp_data:
+    name: wp_data
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /home/mzeroual/data/wp
+
+
