@@ -6,4 +6,4 @@ WORKDIR /app
 
 COPY	./tools/wordpress_script.sh .
 
-ENTRYPOINT ["sh", "wordpress_script.sh"]
+ENTRYPOINT ["bash", "wordpress_script.sh"]
