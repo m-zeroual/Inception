@@ -12,4 +12,4 @@ mysql -e "create database $DATABASE_NAME;
 
 service mariadb stop
 
-mariadbd -u root
+mariadbd -u mysql

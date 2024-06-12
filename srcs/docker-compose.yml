@@ -1,4 +1,3 @@
-version: "3.8"
 services:
   nginx:
     build: requirements/nginx
@@ -8,7 +7,7 @@ services:
     ports:
       - 443:443
     volumes:
-      - data:/app/wordpress
+      - db_data:/app/wordpress
     depends_on:
       - wordpress
     env_file:
@@ -20,7 +19,7 @@ services:
     container_name: wordpress
     restart: always
     volumes:
-      - data:/app/wordpress
+      - db_data:/app/wordpress
     depends_on:
       - mariadb
     env_file:
@@ -32,7 +31,7 @@ services:
     container_name: mariadb
     restart: always
     volumes:
-      - db:/var/lib/mysql
+      - wp_data:/var/lib/mysql
     env_file:
       - ./.env
 
