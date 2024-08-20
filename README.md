@@ -21,7 +21,7 @@ To get started with the Inception project, follow these steps:
 1. **Clone the Repository**
 
     ```bash
-    git clone https://github.com/yourusername/inception.git
+    git clone https://github.com/m-zeroual/inception.git
     cd inception
     ```
 
