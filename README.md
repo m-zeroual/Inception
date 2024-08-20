@@ -42,10 +42,13 @@ To get started with the Inception project, follow these steps:
 
 5. **Run the Setup**
 
-    Start Docker containers and ensure all services are running correctly:
+    Use the `Makefile` to build images, run containers, stop containers, or delete images:
 
     ```bash
-    docker-compose up -d
+    make build       # Build Docker images
+    make up          # Run Docker containers
+    make down        # Stop Docker containers
+    make clean       # Delete Docker images
     ```
 
 6. **Verify**
@@ -58,11 +61,14 @@ To get started with the Inception project, follow these steps:
 
 ## Project Structure
 
-- **`Dockerfile`**: Instructions for building custom Docker images.
-- **`docker-compose.yml`**: Configuration for multi-container Docker applications.
-- **`config/`**: Configuration files for Docker and applications.
-- **`scripts/`**: Setup and management scripts.
-- **`README.md`**: This file, providing an overview of the project.
+- **`srcs/`**: Contains all project-related Docker configurations and files.
+  - **`nginx/`**: Nginx container configuration.
+  - **`wordpress/`**: WordPress setup files.
+  - **`mariadb/`**: MariaDB configuration and initialization.
+- **`.env`**: Environment variables file.
+- **`Makefile`**: Used for building images, running containers, stopping containers, and deleting images.
+
+Each folder inside `srcs/` contains a `Dockerfile`, and all container base images use Debian Bookworm.
 
 ## Security Considerations
 
@@ -84,4 +90,3 @@ For questions or additional information, please contact:
 
 - **Email**: your.email@example.com
 - **GitHub**: [yourusername](https://github.com/yourusername)
-
