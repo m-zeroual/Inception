@@ -2,7 +2,7 @@
 
 ## Overview
 
-The **Inception** project provides hands-on experience in system administration using Docker within a virtual machine. It covers key aspects of virtualization and containerization, focusing on Docker utilization, configuration management, custom Docker image creation, server management in containers, container resilience, user management, domain configuration.
+The **Inception** project provides hands-on experience in system administration using Docker within a virtual machine. It covers key aspects of virtualization and containerization, focusing on Docker utilization, configuration management, custom Docker image creation, server management in containers.
 
 ## Getting Started
 
