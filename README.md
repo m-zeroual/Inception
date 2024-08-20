@@ -46,24 +46,24 @@ To get started with the Inception project, follow these steps:
       
         ```# DATABASE
         DATABASE_NAME=wordpress
-        DATABASE_USER=mzeroual
-        DATABASE_PASS=1234
+        DATABASE_USER=username
+        DATABASE_PASS=password
         
         # Admin User
-        ADMIN_URL=mzeroual.42.fr
+        ADMIN_URL=username.42.fr
         ADMIN_TITLE=wordpress
-        ADMIN_USER=mzeroual
-        ADMIN_PASS=1337
-        ADMIN_EMAIL=mzeroual@gmail.com
+        ADMIN_USER=username
+        ADMIN_PASS=admin-password
+        ADMIN_EMAIL=exemple@gmail.com
         
         # Normal USER
-        USER_NAME=dokoko
-        USER_PASS=1337
-        USER_EMAIL=dokoko@gmail.com
+        USER_NAME=name
+        USER_PASS=password
+        USER_EMAIL=exemple@gmail.com
         USER_ROLE=author
         
         # Nginx ENV
-        DOMAIN_NAME=mzeroual.42.fr
+        DOMAIN_NAME=username.42.fr
   
 4. **Makefile Targets**
 
