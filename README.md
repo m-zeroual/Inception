@@ -33,7 +33,27 @@ To get started with the Inception project, follow these steps:
 
     Install Docker following the official guide for your operating system:
     [Docker Installation Guide](https://docs.docker.com/get-docker/)
+4. **.env File**
 
+    The `.env` file is used to define environment variables that Docker containers will use. Environment variables are a way to configure containerized applications and services without hardcoding values directly into configuration files. This approach provides flexibility and allows you to manage configurations more effectively.
+    
+    ### Structure and Purpose
+    
+    - **General Structure**: The `.env` file typically contains key-value pairs, where each key represents an environment variable name, and each value represents the variable's value. The file should be placed in the root directory of your project or in the `srcs/` directory depending on your Docker Compose setup.
+    
+      **Example `.env` file**:
+      
+      ```env
+      DOMAIN_NAME=example.com
+      MYSQL_ROOT_PASSWORD=rootpassword
+      MYSQL_DATABASE=mydatabase
+      MYSQL_USER=myuser
+      MYSQL_PASSWORD=mypassword
+      WORDPRESS_DB_HOST=mariadb
+      WORDPRESS_DB_NAME=mydatabase
+      WORDPRESS_DB_USER=myuser
+      WORDPRESS_DB_PASSWORD=mypassword
+  
 4. **Makefile Targets**
 
     The `Makefile` provides several targets to manage Docker images and containers. Here’s a brief explanation of each target:
