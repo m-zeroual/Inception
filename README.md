@@ -44,7 +44,8 @@ To get started with the Inception project, follow these steps:
     
       **Example `.env` file**:
       
-        ```# DATABASE
+        ```
+        # DATABASE
         DATABASE_NAME=wordpress
         DATABASE_USER=username
         DATABASE_PASS=password
